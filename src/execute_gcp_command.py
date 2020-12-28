@@ -7,7 +7,7 @@ from src.config import SERVICE_ACCOUNT_ID, GCP_PROJECT_NAME, TARGET_INSTANCE_NAM
 
 class GCPCommandRequest:
     IS_CONFIGURED = False
-    COMMAND_TEMPLATE = "/snap/bin/gcloud --account={} compute instances {} {} --project {} --zone {}"
+    COMMAND_TEMPLATE = "gcloud --account={} compute instances {} {} --project {} --zone {}"
     # f"/snap/bin/gcloud --account={SERVICE_ACCOUNT_ID} compute instances {option} {MINECRAFT_INSTANCE_NAME} \
     # --project {GCP_PROJECT_NAME} --zone {MINECRAFT_INSTANCE_ZONE}"
 

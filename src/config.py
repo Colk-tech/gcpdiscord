@@ -9,7 +9,7 @@ DISCORD_INTENTS = discord.Intents.all()
 DISCORD_INTENTS.members = True
 
 GCP_ACCOUNT_BASE64: str = os.environ["GCPDISCORD_GCP_ACCOUNT_B64"]
-GCP_ACCOUNT_PATH: str = "~/.gcpdiscord_secret.json"
+GCP_ACCOUNT_FILE_NAME: str = "gcpdiscord_secret.json"
 
 SERVICE_ACCOUNT_ID: str = os.environ["GCPDISCORD_GCP_SERVICE_ACCOUNT_ID"]
 GCP_PROJECT_NAME: str = os.environ["GCPDISCORD_GCP_PROJECT_NAME"]
