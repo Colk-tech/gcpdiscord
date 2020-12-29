@@ -9,6 +9,7 @@ DISCORD_INTENTS = discord.Intents.all()
 DISCORD_INTENTS.members = True
 
 DISCORD_MAIN_CHANNEL_ID: int = int(os.environ["GCPDISCORD_DISCORD_MAIN_CH_ID"])
+DISCORD_MINECRAFT_CONSOLE_CHANNEL_ID: int = int(os.environ["GCPDISCORD_DISCORD_MC_CONSOLE_CH_ID"])
 
 GCP_ACCOUNT_BASE64: str = os.environ["GCPDISCORD_GCP_ACCOUNT_B64"]
 GCP_ACCOUNT_FILE_NAME: str = "gcpdiscord_secret.json"
