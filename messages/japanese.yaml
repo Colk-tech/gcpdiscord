@@ -1,0 +1,57 @@
+LOGIN: |
+  Gcpdiscordが起動しました。
+
+REQUEST_RECEIVED: |
+  {member_name} より、操作 {operation_name} を受け付けました。
+  操作を開始します...
+
+PERMISSION_DENIED: |
+  このコマンドを実行する権限がありません。
+  サーバーの管理者に問い合わせて下さい。
+
+CHECK_STATUS: |
+  GCPインスタンスの状態を確認しました。
+  状態: {gcp_status}。
+
+BEGIN_START_OPERATION: |
+  GCPインスタンスおよびゲームサーバーの起動を開始します...
+  最低でも、操作に3分かかります。
+  クラウドサーバーの起動を開始しています。
+
+GCP_STARTED: |
+  クラウドサーバーの起動に成功しました。
+
+STARTING_GAME_SERVER: |
+  ゲームサーバーの起動を開始しています。
+
+GAME_SERVER_STARTED: |
+  ゲームサーバーの起動に成功しました。
+
+BEGIN_STOP_OPERATION: |
+  GCPインスタンスおよびゲームサーバーの停止を開始します...
+  最低でも、操作に5分かかります。
+  ゲームサーバーのシャットダウンを開始しています。
+
+GAME_SERVER_STOPPED: |
+  ゲームサーバーのシャットダウンに成功しました。
+
+STOPPING_GCP: |
+  クラウドサーバーのシャットダウンを開始しています。
+
+GCP_STOPPED: |
+  クラウドサーバーのシャットダウンに成功しました。
+
+OPERATION_COMPLETED: |
+  操作: {operation_name} が完了しました。
+
+ALREADY_IN_THE_STATUS: |
+  GCPインスタンスの状態はすでに{gcp_status}です。
+  操作は何も実行されませんでした。
+
+ERROR_OCCURED: |
+  操作の実行中にエラーが発生しました。
+  サーバーの管理者、もしくは開発者、またはその両方に報告してください。
+  Error: {stack_trace}
+
+NO_SUCH_COMMAND: |
+  コマンドが見つかりませんでした。

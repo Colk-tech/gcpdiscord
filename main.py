@@ -1,7 +1,7 @@
-from src.main_client import MainClient
-from src.gcp_authenticate import gcp_authenticate
+from src.discord.create_bot import bot
+from src.gcp.gcp_authenticate import make_gcp_credential
 
 
 if __name__ == "__main__":
-    gcp_authenticate()
-    MainClient().launch()
+    make_gcp_credential()
+    bot.launch()

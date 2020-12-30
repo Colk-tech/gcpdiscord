@@ -1,0 +1,60 @@
+LOGIN: |
+  独立型クラウドサーバー監視システム。
+  Gcpdiscord、起動しました。
+
+REQUEST_RECEIVED: |
+  ユーザー認証、{member_name} 管理官。
+  {guild_name} 所属。 使用許諾確認。
+  適正ユーザーです。 ロックを解除し、操作を開始します。
+
+PERMISSION_DENIED: |
+  不正ユーザーです。
+  操作をロックします。
+
+CHECK_STATUS: |
+  対象のステータスが更新されました。
+  サーバーステータス、{gcp_status}。
+
+BEGIN_START_OPERATION: |
+  操作モード、スタート。
+  最低予想操作終了時間は、3分です。
+  クラウドサーバーの起動を開始しています。
+
+GCP_STARTED: |
+  クラウドサーバーの起動に成功しました。
+
+STARTING_GAME_SERVER: |
+  ゲームサーバーの起動を開始しています。
+
+GAME_SERVER_STARTED: |
+  ゲームサーバーの起動に成功しました。
+
+BEGIN_STOP_OPERATION: |
+  操作モード、ストップ。
+  最低予想操作終了時間は、5分です。
+  ゲームサーバーのシャットダウンを開始しています。
+
+GAME_SERVER_STOPPED: |
+  ゲームサーバーのシャットダウンに成功しました。
+
+STOPPING_GCP: |
+  クラウドサーバーのシャットダウンを開始しています。
+
+GCP_STOPPED: |
+  クラウドサーバーのシャットダウンに成功しました。
+
+OPERATION_COMPLETED: |
+  操作モード、{operation_name}。
+  操作が完了しました。
+
+ALREADY_IN_THE_STATUS: |
+  対象のステータスはすでに{gcp_status}です。
+  操作対象ではありません。 操作をロックします。
+
+ERROR_OCCURED: |
+  エラー。 操作の実行中にエラーが発生しました。
+  本部、もしくはデベロッパーに報告してください。
+  Error: {stack_trace}
+
+NO_SUCH_COMMAND: |
+  エラー。 想定されていない操作が入力されました。
