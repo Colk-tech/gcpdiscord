@@ -43,4 +43,4 @@ class MessageHandler:
             await self.__channel.send(content=message.get("NO_SUCH_COMMAND"))
             return
 
-        await operation().execute(self.__raw_message, self.__split_message)
+        await operation().execute(self.__raw_message)
