@@ -24,4 +24,4 @@ class Status(OperationOrigin):
             await send_unauthorized_message(channel=raw_message.channel)
             return
 
-        await raw_message.channel.send(message.get("CHECK_STATUS", gcp_status=gcp.INSTANCE["status"]))
+        await raw_message.channel.send(message.get("CHECK_STATUS", gcp_status=gcp.get_instance()["status"]))

@@ -13,9 +13,8 @@ class GCPHolder(Singleton):
     def __init__(self):
         self.CREDENTIAL: GoogleCredentials = self.get_gcp_credential()
         self.RESOURCE: Resource = build("compute", "v1", credentials=self.CREDENTIAL)
-        self.INSTANCE = self.__get_instance()
 
-    def __get_instance(self):
+    def get_instance(self):
         instance = self.RESOURCE.instances().get(
             project=GCP_PROJECT_NAME,
             zone=GCP_TARGET_INSTANCE_ZONE,
