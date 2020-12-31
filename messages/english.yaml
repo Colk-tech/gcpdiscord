@@ -55,3 +55,10 @@ ERROR_OCCURRED: |
 
 NO_SUCH_COMMAND: |
   There's no such command.
+
+HELP: |
+  `{prefix} help`: Show this mannual.
+  `{prefix} start`: Start the GCP instance and the game server.
+  `{prefix} stop`: Shutdown the game server and the GCP instance.
+  `{prefix} force-stop`: Shutodown the GCP instance without shutdowning game ser er.
+  `{prefix} status`: Check the status of the GCP instance.

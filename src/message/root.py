@@ -3,10 +3,7 @@ import yaml
 import re
 
 from src.utils.singleton import Singleton
-
 from config import MESSAGE_FILE_PATH
-
-FORMAT_REGEX = re.compile("{.*}")
 
 
 class MessageRoot(Singleton):
@@ -19,11 +16,11 @@ class MessageRoot(Singleton):
             data: dict = yaml.safe_load(stream)
         return data
 
-    def get(self, key: str, **kwargs: Dict[str:any]) -> str:
-        arguments: Dict[str:any] = kwargs
+    def get(self, key: str, **kwargs: Dict) -> str:
+        arguments: Dict = kwargs
         composing: str = self.__messages[key]
 
-        for key, value in arguments:
+        for key, value in arguments.items():
             if value is None or value == "":
                 arguments.pop(key)
 

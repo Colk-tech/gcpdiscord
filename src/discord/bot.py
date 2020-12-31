@@ -17,23 +17,23 @@ class DiscordBOT(Singleton, discord.Client):
             presences=True,
             guild_subscriptions=True,
             intents=DISCORD_INTENTS)
+        self.main_channel: Optional[discord.TextChannel] = None
         self.guild: Optional[discord.Guild] = None
 
     def launch(self):
         self.run(DISCORD_TOKEN)
 
     async def on_ready(self):
-        await self.send_to_id_channel(DISCORD_MAIN_CHANNEL_ID, content=message.get("LOGIN"))
+        self.main_channel = self.get_channel(DISCORD_MAIN_CHANNEL_ID)
+
+        await self.main_channel.send(message.get("LOGIN"))
 
         if len(self.guilds) > 1:
             raise RuntimeError("This bot supports only one server to be alive.")
 
         self.guild = self.guilds[0]
 
-    async def on_message(self, message: discord.Message):
+    @staticmethod
+    async def on_message(message: discord.Message):
         handler = MessageHandler(message)
         await handler.execute()
-
-    async def send_to_id_channel(self, channel_id: int, **kwargs):
-        channel = self.get_channel(channel_id)
-        await channel.send(**kwargs)

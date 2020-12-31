@@ -1,8 +1,10 @@
 from typing import Optional
 
+from src.operations.help import Help
+
 
 def get_operation(key: str) -> Optional[type]:
-    operations = []
+    operations = [Help]
 
     for operation in operations:
         if operation.MY_INDEX == key:

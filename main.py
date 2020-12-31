@@ -1,7 +1,6 @@
-from src.discord.create_bot import bot
-from src.gcp.gcp_authenticate import make_gcp_credential
+from src.discord.bot import DiscordBOT
 
 
 if __name__ == "__main__":
-    make_gcp_credential()
+    bot = DiscordBOT()
     bot.launch()

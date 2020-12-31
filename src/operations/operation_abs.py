@@ -1,10 +1,9 @@
 import abc
-from typing import Optional
+from typing import Optional, List
 
 import discord
 
 from config import PERMITTED_ROLE_IDS
-from src.utils.unauthorized import send_unauthorized_message
 
 
 class OperationOrigin(metaclass=abc.ABCMeta):
@@ -15,16 +14,10 @@ class OperationOrigin(metaclass=abc.ABCMeta):
         self.MY_INDEX: str = ""
         self.IS_AUTHORIZATION_NEEDED: bool = True
         self.__raw_message: Optional[discord.Message] = None
+        self.__channel: Optional[discord.TextChannel] = None
+        self.__message_author: Optional[discord.Member] = None
+        self.__split_message: Optional[List[str]] = None
 
-    @abc.abstractmethod
-    async def execute(self, raw_message: discord.Message):
-        self.__raw_message = raw_message
-
-        if not self.check_permitted(raw_message.author):
-            await send_unauthorized_message(channel_id=raw_message.channel.id)
-            return
-
-    @abc.abstractmethod
     def check_permitted(self, member: discord.Member) -> bool:
         permitted_role_ids = PERMITTED_ROLE_IDS
         member_role_ids = list(map((lambda role: role.id), member.roles))
@@ -34,5 +27,6 @@ class OperationOrigin(metaclass=abc.ABCMeta):
 
         if len(set(member_role_ids) & set(permitted_role_ids)) <= 0:
             return False
+
         else:
             return True

@@ -16,10 +16,10 @@ CHECK_STATUS: |
 BEGIN_START_OPERATION: |
   GCPインスタンスおよびゲームサーバーの起動を開始します...
   最低でも、操作に3分かかります。
-  クラウドサーバーの起動を開始しています。
+  GCPインスタンスの起動を開始しています。
 
 GCP_STARTED: |
-  クラウドサーバーの起動に成功しました。
+  GCPインスタンスの起動に成功しました。
 
 STARTING_GAME_SERVER: |
   ゲームサーバーの起動を開始しています。
@@ -36,10 +36,10 @@ GAME_SERVER_STOPPED: |
   ゲームサーバーのシャットダウンに成功しました。
 
 STOPPING_GCP: |
-  クラウドサーバーのシャットダウンを開始しています。
+  GCPインスタンスのシャットダウンを開始しています。
 
 GCP_STOPPED: |
-  クラウドサーバーのシャットダウンに成功しました。
+  GCPインスタンスのシャットダウンに成功しました。
 
 OPERATION_COMPLETED: |
   操作: {operation_name} が完了しました。
@@ -55,3 +55,11 @@ ERROR_OCCURED: |
 
 NO_SUCH_COMMAND: |
   コマンドが見つかりませんでした。
+
+HELP: |
+  操作マニュアルを表示します。
+  `{prefix} help`: このマニュアルを表示します。
+  `{prefix} start`: GCPインスタンス、及びゲームサーバーを起動します。
+  `{prefix} stop`: ゲームサーバー、及びGCPインスタンス、をシャットダウンします。
+  `{prefix} force-stop`: ゲームサーバーを無視して、GCPインスタンスをシャットダウンします。
+  `{prefix} status`: GCPインスタンスのステータスを確認します。

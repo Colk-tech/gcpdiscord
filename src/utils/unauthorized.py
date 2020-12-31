@@ -1,8 +1,7 @@
-from src.discord.create_bot import bot
+import discord
 
 from src.message.create_root import message
 
 
-async def send_unauthorized_message(channel_id: int) -> None:
-    await bot.send_to_id_channel(channel_id=channel_id,
-                                 content=message.get("PERMISSION_DENIED"))
+async def send_unauthorized_message(channel: discord.TextChannel) -> None:
+    await channel.send(content=message.get("PERMISSION_DENIED"))
