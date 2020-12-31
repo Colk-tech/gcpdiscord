@@ -21,6 +21,17 @@ BEGIN_START_OPERATION: |
 GCP_STARTED: |
   GCPインスタンスの起動に成功しました。
 
+NEED_CONFIRM_TO_FORCE_QUIT: |
+  警告: この操作は、推奨されません。
+  続行された場合、データが消失する可能性があります。
+  それでも実行しますか？
+  実行する場合、`--confirm` オプションを指定してください。
+
+BEGIN_FORCE_QUIT_OPERATION: |
+  GCPインスタンスを強制終了しています...
+  最低でも、操作に1分かかります。
+  GCPインスタンスの起動を開始しています。
+
 STARTING_GAME_SERVER: |
   ゲームサーバーの起動を開始しています。
 

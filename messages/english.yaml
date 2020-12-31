@@ -21,6 +21,17 @@ BEGIN_START_OPERATION: |
 GCP_STARTED: |
   Succeed to start the GCP instance.
 
+NEED_CONFIRM_TO_FORCE_QUIT: |
+  WARNING: THIS OPERATION IS NOT RECOMMENDED.
+  If you continuce, DATA OF GAME SERVER MAY BE LOST.
+  Do you really want to continue?
+  To continue, give `--confirm` option.
+
+BEGIN_FORCE_QUIT_OPERATION: |
+  Stopiing GCP instance forcibly...
+  The estimated time to complete this operation is 1 minutes at least.
+  Starting the GCP instance...
+
 STARTING_GAME_SERVER: |
   Starting the game server...
 

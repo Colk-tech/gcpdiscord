@@ -5,7 +5,7 @@ LOGIN: |
 REQUEST_RECEIVED: |
   ユーザー認証、{member_name} 管理官。
   {guild_name} 所属。 使用許諾確認。
-  適正ユーザーです。 ロックを解除し、操作を開始します。
+  適正ユーザーです。 操作を開始します。
 
 PERMISSION_DENIED: |
   不正ユーザーです。
@@ -42,6 +42,18 @@ STOPPING_GCP: |
 
 GCP_STOPPED: |
   クラウドサーバーのシャットダウンに成功しました。
+
+NEED_CONFIRM_TO_FORCE_QUIT: |
+  この操作は、推奨されません。
+  続行された場合、データが消失する可能性があります。
+  それでも実行しますか？
+  実行する場合、`--confirm` オプションを指定してください。
+
+BEGIN_FORCE_QUIT_OPERATION: |
+  操作モード、フォースストップ。
+  最低予想操作終了時間は、1分です。
+  クラウドサーバーのシャットダウンを開始しています。
+  ご注意ください。
 
 OPERATION_COMPLETED: |
   操作モード、{operation_name}。
