@@ -1,0 +1,75 @@
+LOGIN: |
+  Gcpdiscord has started.
+
+REQUEST_RECEIVED: |
+  Recieved request: {operation_name} from {member_name}.
+  Staring the operation...
+
+PERMISSION_DENIED: |
+  You are not permitted to perform this command.
+  To perform this command, contact your server owner to grant you the role.
+
+CHECK_STATUS: |
+  GCP status has been checked.
+  STATUS: {gcp_status}.
+
+BEGIN_START_OPERATION: |
+  Trying to start the GCP instance and game server.
+  The estimated time to complete this operation is 3 minutes at least.
+  Starting the GCP instance...
+
+GCP_STARTED: |
+  Succeed to start the GCP instance.
+
+NEED_CONFIRM_TO_FORCE_QUIT: |
+  WARNING: THIS OPERATION IS NOT RECOMMENDED.
+  If you continuce, DATA OF GAME SERVER MAY BE LOST.
+  Do you really want to continue?
+  To continue, give `--confirm` option.
+
+BEGIN_FORCE_QUIT_OPERATION: |
+  Stopiing GCP instance forcibly...
+  The estimated time to complete this operation is 1 minutes at least.
+  Starting the GCP instance...
+
+STARTING_GAME_SERVER: |
+  Starting the game server...
+
+GAME_SERVER_STARTED: |
+  Succeed to start the game server.
+
+BEGIN_STOP_OPERATION: |
+  Trying to stop the GCP server and game server.
+  The estimated time to complete this operation is 5 minutes at least.
+  Stopping the game server...
+
+GAME_SERVER_STOPPED: |
+  Succeed to stop the game server.
+
+STOPPING_GCP: |
+  Stopping the GCP instance...
+
+GCP_STOPPED: |
+  Succeed to stop the GCP instance.
+
+OPERATION_COMPLETED: |
+  Operation: {operation_name} has been completed.
+
+ALREADY_IN_THE_STATUS: |
+  The status of the GCP server is already {gcp_status}.
+  No operation has been done.
+
+ERROR_OCCURRED: |
+  An error has occurred while processing the operation.
+  Please notice this to your server owner or the developer.
+  Error: {stack_trace}
+
+NO_SUCH_COMMAND: |
+  There's no such command.
+
+HELP: |
+  `{prefix} help`: Show this mannual.
+  `{prefix} start`: Start the GCP instance and the game server.
+  `{prefix} stop`: Shutdown the game server and the GCP instance.
+  `{prefix} force-stop`: Shutodown the GCP instance without shutdowning game ser er.
+  `{prefix} status`: Check the status of the GCP instance.
