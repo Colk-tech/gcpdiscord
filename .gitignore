@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Project secret file
-gcpdiscord_secret.json
+gcediscord_secret.json
