@@ -13,7 +13,8 @@ RUN apt-get update \
     && localedef -f UTF-8 -i en_US en_US.UTF-8
 
 RUN mkdir -p /deploy/gcpdiscord
-COPY . /deploy/gcpdiscord
+COPY ./Pipfile /deploy/gcpdiscord/Pipfile
+COPY ./Pipfile.lock /deploy/gcpdiscord/Pipfile.lock
 
 WORKDIR /deploy/gcpdiscord
 
