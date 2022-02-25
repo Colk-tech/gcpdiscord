@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  gcpdiscord:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: "gcpdiscord-bot"
+    environment:
+      GCEDISCORD_DISCORD_TOKEN:       ${GCEDISCORD_DISCORD_TOKEN}
+      GCEDISCORD_DISCORD_MAIN_CH_ID:  ${GCEDISCORD_DISCORD_MAIN_CH_ID}
+      GCEDISCORD_PERMITTED_ROLE_IDS:  ${GCEDISCORD_PERMITTED_ROLE_IDS}
+      GCEDISCORD_GCE_INSTANCE_ZONE:   ${GCEDISCORD_GCE_INSTANCE_ZONE}
+      
+    entrypoint: python main.py
+    restart: "always"
+    tty: true
