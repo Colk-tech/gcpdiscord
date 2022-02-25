@@ -6,6 +6,11 @@ services:
       context: .
       dockerfile: ./Dockerfile
     container_name: "gcpdiscord-bot"
+    volumes:
+      - type: bind
+        source: "."
+        target: "/deploy/gcpdiscord"
+        read_only: true
     environment:
       GCEDISCORD_DISCORD_TOKEN:       ${GCEDISCORD_DISCORD_TOKEN}
       GCEDISCORD_DISCORD_MAIN_CH_ID:  ${GCEDISCORD_DISCORD_MAIN_CH_ID}
